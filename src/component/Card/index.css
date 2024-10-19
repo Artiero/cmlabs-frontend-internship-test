@@ -1,0 +1,66 @@
+.card-costum {
+    padding-top: 5vw;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    gap: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .card-costum {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.card {
+    border-style: none;
+    display: block;
+    height: 25vw;
+    width : 20vw;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+img {
+    border-radius: 10px;
+    height: 100%;
+    width : 20vw;
+    display: block;
+}
+
+.imgCostum {
+    position: relative;
+    height: 25vw;
+    width : 20vw;
+    justify-content: center;
+}
+
+.ractangle {
+    border-radius: 10px;
+    z-index: 99;
+    height: 25vw;
+    width : 20vw; 
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    position: absolute;
+}
+
+.badgeCostum {
+    background-color: #800000;
+    border-radius: 10px;
+    padding: 0.8vw;
+    margin: 0vw;
+    color: #FFD700;
+    font-size: 1.5vw;
+    font-family: 'Merriweather' , serif;
+}
+
+
+
+
