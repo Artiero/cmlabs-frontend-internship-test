@@ -5,10 +5,10 @@ import Badge from 'react-bootstrap/Badge';
 import { useNavigate } from 'react-router-dom';
 
 export default function CardComponent({ data }) {
-  const navigate = useNavigate();  // Hook untuk navigasi
+  const navigate = useNavigate(); 
 
     const handleClick = (category) => {
-        navigate(`/detail/${category}`);  // Navigasi ke halaman detail dengan parameter kategori
+        navigate(`/detail/${category}`); 
     };
 
     return (

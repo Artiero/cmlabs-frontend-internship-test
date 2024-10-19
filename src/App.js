@@ -10,13 +10,12 @@ import DetailPage from './pages/DetailPage';
 function App() {
   const [meal, setMeal] = useState([]);
 
-  // Ambil data kategori saat aplikasi pertama kali dimuat
   useEffect(() => {
     const datameal = async () => {
       try {
         const response = await axios.get('https://www.themealdb.com/api/json/v1/1/categories.php');
         console.log(response);
-        setMeal(response.data.categories);  // Simpan kategori di state
+        setMeal(response.data.categories); 
       } catch (error) {
         console.log(error);
       }
@@ -27,7 +26,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Halaman Utama */}
         <Route
           path="/"
           element={
@@ -45,14 +43,12 @@ function App() {
                 <Breadcrumb className="breadcrumb-costum" listTag="div">
                   <BreadcrumbItem href="#" tag="a">Home</BreadcrumbItem>
                 </Breadcrumb>
-                {/* Kirim data dan path navigasi */}
                 <CardComponent data={meal} />
               </div>
             )
           }
         />
 
-        {/* Halaman Detail */}
         <Route path="/detail/:category" element={<DetailPage />} />
       </Routes>
     </Router>
